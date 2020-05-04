@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+    background-color: white;
+  }
+  
+  input[type=submit] {
+  background-color: #A52A2A; /* Green */
+  border: 1px solid black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #3e8e41;
+}
+
+input[id=del] {
+  background-color: orange; /* Green */
+  border: 1px solid black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[id=del]:hover {
+  background-color: purple;
+}
+
+input[id=id] {
+  background-color: #A52A2A; /* Green */
+  border: 1px solid black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+input[id=id]:hover {
+  background-color: brown;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+input[id=sea] {
+  background-color: green; /* Green */
+  border: 1px solid black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+input[id=sea]:hover {
+  background-color: green;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+  label
+  {
+    font: 15px Arial, sans-serif;
+    width:131px;
+    display: block;
+    margin-left: -8px;
+  }
+
+  label[for=check1]
+  {
+    font: 15px Arial, sans-serif;
+    width:300px;
+    display: block;
+    margin-left: -8px;
+  }
+
+  label[for=query]
+  {
+    font: 15px Arial, sans-serif;
+    width:300px;
+    display: block;
+    margin-left: 30px;
+  }
+
+  input[type=checkbox] {
+    vertical-align:middle;
+  }
+
+  input[type=text] {
+    border: 2px solid black;
+    border-radius: 4px;
+    display: inline-block;
+  }
+
+  input[name=text] {
+    border: 2px solid black;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  
+   input[type=password] {
+    border: 2px solid black;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  .styleform
+  {
+    display: inline-block;
+  }
+</style>
+</head>
+  <title>Job Search</title>
+    <body>
+      <p style="font-size:25px">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b><u>Simple Job Search Engine</u></b></p><br>
+        <div id=tk>
+            <form method="POST" enctype="multipart/form-data">
+      
+              <div class="styleform">
+                <label for="NAME" >&nbsp;&nbsp; Host Name</label>
+                <input name="hname" type="text" id="NAME" size="20">
+              </div>
+              <div class="styleform">
+                <label for="no" >&nbsp;&nbsp; Username</label>
+                <input name="uid" type="text" id="no", size="20">
+               </div>
+               
+               <div class="styleform">
+                <label for="age" >&nbsp;&nbsp; Password</label>
+                <input name="pwd" type="password" id="age" size="20">
+                 </div>
+                <div class="styleform">
+                 <label for="S_NO:" >&nbsp;&nbsp; Database</label>
+                 <input name="db" type="text" id="S_NO:" size="20">
+                </div> 
+                <div class="styleform">
+                    <label for="S_NO:" >&nbsp;&nbsp; Table</label>
+                    <input name="tb" type="text" id="S_NO:" size="20">
+                </div> <br><br>
+                &emsp;&emsp;&emsp;&emsp;
+                <input type="submit" name= "b" value="Create Database" />
+                &emsp;&emsp; &emsp;&emsp; &emsp;&emsp;&emsp;&emsp; 
+                <input type="submit" name= "b" value="Create Table" /><br><br><br><br>
+                <div class="styleform">
+                 <label for="myfile">&nbsp;&nbsp;Select a file:</label>
+                 <input type="file" accept=".xlsx, .csv" id="myfile" name="myfile" value="Browse" size="20"><br><br>
+                </div><br><br>
+                <li>
+                 <label for="check1" style="word-wrap:break-word"></label>
+                  <input type="checkbox" id="vehicle1" name="checkbox" value="checked" />File uploaded after Table Initialization
+                 </label>
+                 <input type='hidden' name="checkbox" value="unchecked">
+                </li><br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp; &emsp;&emsp;&emsp;&emsp; <input type="submit" name= "b" id = "id" value="Initialize Table" /><br><br><br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp; &emsp;&emsp;&emsp;&emsp;<div class="styleform">
+                 <label for="query">Enter your query:</label>
+                 <input type="text" name="text" size="25"><br><br>
+                 &emsp;&emsp;<input type="submit" id="sea" name="b" value="Search">
+                </div><br><br><br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="submit" name= "b" id = "del" value="Delete Table" />
+            </form>
+        </div>
+      </body>
+</html>
