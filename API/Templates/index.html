@@ -1,0 +1,46 @@
+<form method="GET">
+<!DOCTYPE html>
+<html lang="en">
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Employees</title>
+</head>
+<body>
+<table id="profiles" style="width:100%">
+    {% if result %}
+    <tr>
+        <th>Name</th>
+        <th>Intro</th>
+        <th>Location</th>
+        <th>Job</th>
+        <th>URL</th>
+    </tr>
+    {% for row in result %}
+    <tr>
+        {% for item in row %}
+        <td> {{item}} </td>     
+        {% endfor %}
+    </tr>
+    {% endfor %}
+    {% endif %}
+</table>
+</body>
+</html>
+</form>
